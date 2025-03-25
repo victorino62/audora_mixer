@@ -1,0 +1,196 @@
+/* Estilo do Body */
+body {
+    background-color: rgba(255, 119, 0, 0.241); 
+    color: rgb(0, 0, 0); /* Define a cor do texto como branco para contraste */
+    font-family: Arial, sans-serif; /* Define uma fonte básica */
+    margin: 20px; /* Define a margem ao redor do conteúdo */
+    
+}
+
+#corpo {
+    padding-left: 90px;
+}
+
+/* Título Principal */
+h1 {
+    text-align: center; /* Centraliza o título */
+    margin-top: 10px; /* Margem para dar um pequeno espaço no topo */
+}
+/* Estilo do menu de navegação */
+nav {
+    background-color: #34495e;  /* Cor do fundo do menu */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Estilo da lista de links de navegação */
+nav ul {
+    list-style: none;  /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex;  /* Flexbox para distribuir os itens */
+    justify-content: center;  /* Centraliza horizontalmente */
+}
+
+/* Estilo dos itens da lista de navegação */
+nav ul li {
+    margin: 0 15px;  /* Espaçamento entre os links */
+}
+
+/* Estilo dos links de navegação */
+nav ul li a {
+    color: #ecf0f1;  /* Cor dos links: branco suave */
+    text-decoration: none;  /* Remove o sublinhado */
+    font-weight: bold;
+    transition: color 0.3s;  /* Animação suave na mudança de cor */
+}
+
+/* Cor dos links ao passar o mouse */
+nav ul li a:hover {
+    color: #1abc9c;  /* Verde claro ao passar o mouse */
+}
+
+/* Estilo das Tracks */
+.track {
+    margin-bottom: 20px; /* Espaço entre as faixas */
+}
+
+/* Controles de Volume */
+input[type="range"] {
+    width: 80%; /* O controle ocupa toda a largura disponível */
+    background-color: #333; /* Fundo escuro para contraste */
+    cursor: pointer;
+}
+
+/* Estilo para a logo */
+.logo {
+    display: flex;           /* Ativa o flexbox */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    height: 150px;            /* Define uma altura específica para o topo */
+    margin-top: 20px;         /* Espaço superior */
+}
+
+/* Ajuste para a imagem da logo */
+.logo img {
+    width: 400px; /* Tamanho da logo */
+}
+
+/* Estilo do botão de like */
+.like-button {
+    background-color: #28a745; /* Cor de fundo verde */
+    border: none;
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho do texto */
+    margin-top: 10px; /* Espaçamento superior */
+    cursor: pointer;
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s; /* Animação para mudança de cor */
+}
+
+.like-button:hover {
+    background-color: #218838; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo do botão de like após ser clicado */
+.like-button.clicked {
+    background-color: gray; /* Cor para indicar que foi clicado */
+    cursor: not-allowed; /* Cursor indica que não pode clicar */
+}
+
+/* Oculta o contador de likes por padrão */
+.admin-only {
+    display: none;  /* Invisível para os usuários normais */
+}
+
+/* Exibe o contador de likes quando necessário */
+.show-admin {
+    display: inline;  /* Visível apenas para você (admin) */
+}
+
+.checked {
+    color: gold; /* Cor das estrelas selecionadas */
+}
+
+.rating .fa-star {
+    cursor: pointer;
+    font-size: 24px; /* Tamanho das estrelas */
+    transition: color 0.3s; /* Animação suave ao selecionar */
+}
+
+.rating .fa-star:hover {
+    color: orange; /* Cor ao passar o mouse sobre a estrela */
+}
+
+#volume1 {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+@media (max-width: 1024px) {
+    #volume1 {
+        width: 200px;
+    }
+}
+
+
+#volume2 {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+@media (max-width: 1024px) {
+    #volume2 {
+        width: 200px;
+    }
+}
+
+#volume3 {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+@media (max-width: 1024px) {
+    #volume3 {
+        width: 200px;
+    }
+}
+
+#volume4 {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+@media (max-width: 1024px) {
+    #volume4 {
+        width: 200px;
+    }
+}
+
+/* Posicionamento fixo no canto inferior direito */
+#whatsapp-icon {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 9999; /* para garantir que fique na frente de outros elementos */
+  }
+  
+  /* Classe que controla o “tremor” via animação de keyframes */
+  .shake {
+    animation: shake-animation 0.5s ease-in-out;
+  }
+  
+  /* Keyframes para o efeito de tremor */
+  @keyframes shake-animation {
+    0%, 100%   { transform: translateX(0); }
+    20%, 60%   { transform: translateX(-5px); }
+    40%, 80%   { transform: translateX(5px); }
+  }

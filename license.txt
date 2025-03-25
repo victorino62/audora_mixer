@@ -1,0 +1,24 @@
+Licença Proprietária do Projeto Audio Mixer Web App
+
+Direitos Autorais
+
+Todos os direitos sobre este software, incluindo, mas não se limitando a, o código-fonte, design, logotipos e outros materiais relacionados, são de propriedade exclusiva do autor (Lucas Victorino). Nenhuma parte deste software pode ser copiada, distribuída, modificada, ou usada de qualquer forma, sem a autorização expressa do proprietário.
+
+Uso Pessoal e Comercial
+
+O uso deste software é restrito exclusivamente para fins pessoais e não comerciais. Qualquer tentativa de usar o software para ganho comercial, direta ou indiretamente, sem o consentimento prévio por escrito do proprietário, é estritamente proibida.
+
+Proibição de Modificações e Distribuição
+
+É proibido modificar, descompilar, ou distribuir o código-fonte, seja de forma integral ou parcial, sem a permissão prévia e por escrito do proprietário. Quaisquer modificações feitas ao código sem autorização serão consideradas uma violação desta licença.
+
+Garantia e Responsabilidade
+
+Este software é fornecido "como está", sem garantias de qualquer tipo, expressas ou implícitas, incluindo, mas não se limitando a, garantias de comercialização, adequação a um propósito específico, ou não violação. Em nenhuma circunstância o autor será responsável por quaisquer danos decorrentes do uso ou da incapacidade de uso do software.
+
+Termos de Violação
+
+Qualquer violação dos termos desta licença pode resultar em ações legais, incluindo, mas não se limitando a, sanções financeiras e outras medidas cabíveis previstas pela legislação vigente.
+Contato
+
+Para obter permissão para usar, modificar ou distribuir este software, entre em contato com o proprietário através do e-mail: lucass.victorino\@gmail.com
