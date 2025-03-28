@@ -1,31 +1,7 @@
-// Função para avaliar a track
-function rateTrack(trackId, rating) {
-    // Salva a avaliação no localStorage
-    localStorage.setItem(`rating-${trackId}`, rating);
 
-    // Atualiza a exibição das estrelas
-    const ratingContainer = document.getElementById(`rating-${trackId}`);
-    const stars = ratingContainer.getElementsByClassName('fa-star');
-
-    for (let i = 0; i < stars.length; i++) {
-        if (i < rating) {
-            stars[i].classList.add('checked');
-        } else {
-            stars[i].classList.remove('checked');
-        }
-    }
-}
 
 // Carrega as avaliações salvas ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
-    const trackIds = ['track1'];
-    trackIds.forEach(trackId => {
-        const savedRating = localStorage.getItem(`rating-${trackId}`);
-        if (savedRating) {
-            rateTrack(trackId, parseInt(savedRating));
-        }
-    });
-
     // Configurar os controles de volume assim que o documento estiver carregado
     setupVolumeControls();
 
@@ -117,14 +93,35 @@ setInterval(function() {
     }
   }, 10000);
 };
-     
+
+// Função para gerar uma chave única baseada na URL da página
+function getFeedbackKey() {
+    const path = window.location.pathname; // ex: /caminho_1.html
+    return "feedback-" + path.substring(path.lastIndexOf("/") + 1); // ex: feedback-caminho_1.html
+}
+
+function saveFeedback() {
+    const key = getFeedbackKey();
+    const feedback = document.getElementById("userFeedback").value;
+    localStorage.setItem(key, feedback);
+    alert("Feedback salvo para este arquivo!");
+}
+
+// Ao carregar a página, preencher o campo se já tiver feedback salvo
+window.onload = function () {
+    const key = getFeedbackKey();
+    const saved = localStorage.getItem(key);
+    if (saved) {
+        document.getElementById("userFeedback").value = saved;
+    }
+};
 
 
 
 
+/*
 
-
-/* Função que alterna a visualização dos likes para você (admin)
+ // Função que alterna a visualização dos likes para você (admin)
 function toggleAdminView() {
     const likeCountElements = document.querySelectorAll('.admin-only');
     likeCountElements.forEach(element => {
@@ -232,6 +229,41 @@ document.addEventListener("DOMContentLoaded", () => {
     loadLikes(); // Chama a função loadLikes
     setupVolumeControls(); // Configura os controles de volume
 });
+
+
+
+
+
+
+
+
+// Função para avaliar a track
+function rateTrack(trackId, rating) {
+    // Salva a avaliação no localStorage
+    localStorage.setItem(`rating-${trackId}`, rating);
+
+    // Atualiza a exibição das estrelas
+    const ratingContainer = document.getElementById(`rating-${trackId}`);
+    const stars = ratingContainer.getElementsByClassName('fa-star');
+
+    for (let i = 0; i < stars.length; i++) {
+        if (i < rating) {
+            stars[i].classList.add('checked');
+        } else {
+            stars[i].classList.remove('checked');
+        }
+    }
+}
+
+// Carrega as avaliações salvas ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    const trackIds = ['track1'];
+    trackIds.forEach(trackId => {
+        const savedRating = localStorage.getItem(`rating-${trackId}`);
+        if (savedRating) {
+            rateTrack(trackId, parseInt(savedRating));
+        }
+    });
 
 
 

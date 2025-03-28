@@ -18,8 +18,9 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="caminho_1.html">Caminho 1</a></li>
-            <li><a href="caminho_1.html">Caminho 2</a></li>
-            <li><a href="caminho_1.html">Caminho 3</a></li>
+            <li><a href="caminho_2.html">Caminho 2</a></li>
+            <li><a href="caminho_3.html">Caminho 3</a></li>
+            <li><a href="caminho_4.html">Caminho 4</a></li>
         </ul>
     </nav>
     
@@ -44,28 +45,28 @@
             <div class="track">
                 <h3>Caminho 1</h3>
                 <audio id="track1">
-                    <source src="audio/Adormecer Track 1 V2 loop.mp3" type="audio/mpeg">
+                    <source src="audio/RICARDO_ENTREGA_1/masters/Vinheta_1_FULL MASTER.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
+
+                 
                 <label for="volume1">Volume</label>
                 <input type="range" id="volume1" min="0" max="1" step="0.01" value="1">
 
-                <!-- Avaliação por estrelas -->
-                <div class="rating" id="rating-track1">
-                    <i class="fa fa-star" data-value="1" onclick="rateTrack('track1', 1)"></i>
-                    <i class="fa fa-star" data-value="2" onclick="rateTrack('track1', 2)"></i>
-                    <i class="fa fa-star" data-value="3" onclick="rateTrack('track1', 3)"></i>
-                    <i class="fa fa-star" data-value="4" onclick="rateTrack('track1', 4)"></i>
-                    <i class="fa fa-star" data-value="5" onclick="rateTrack('track1', 5)"></i>
-                </div>
+                <br><br>
+
+                 <!-- Ícone de download -->
+            <a href="audio/RICARDO_ENTREGA_1/masters/Vinheta_1_FULL MASTER.wav" download>
+                <i class="fas fa-download"></i> Baixar
+            </a>
             </div>
             <br><br>
 
             <!-- Track 2 -->
             <div class="track">
-                <h3>Soundscape FX</h3>
+                <h3>ARCHERY</h3>
                 <audio id="track2">
-                    <source src="audio/Soundscapes_FX_Designed.mp3" type="audio/mpeg">
+                    <source src="audio/RICARDO_ENTREGA_1/1/Vinheta_1_ARCHERY.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
                 <label for="volume2">Volume</label>
@@ -74,9 +75,9 @@
 
             <!-- Track 3 -->
             <div class="track">
-                <h3>Soundscape Oceano</h3>
+                <h3>SFX</h3>
                 <audio id="track3">
-                    <source src="audio/Soundscapes_Ocean.mp3" type="audio/mpeg">
+                    <source src="audio/RICARDO_ENTREGA_1/1/Vinheta_1_SFX.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
                 <label for="volume3">Volume</label>
@@ -85,9 +86,9 @@
 
             <!-- Track 4 -->
             <div class="track">
-                <h3>Soundscape Ruído Branco</h3>
+                <h3>SYNTH</h3>
                 <audio id="track4">
-                    <source src="audio/Soundscapes_Pink_Noise.mp3" type="audio/mpeg">
+                    <source src="audio/RICARDO_ENTREGA_1/1/Vinheta_1_SYNTH.wav" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
                 <label for="volume4">Volume</label>
@@ -95,12 +96,32 @@
             </div>
     </section>
 
+    <section class="feedback">
+        <h2>Deixe aqui sua percepção sobre os arquivos</h2>
+        <textarea id="userFeedback" placeholder="(somente você vê este comentário)" rows="6"></textarea>
+        <button onclick="saveFeedback()">Salvar Feedback </button>
+    </section>
+
+    <form action="https://formsubmit.co/lucass.victorino@gmail.com" method="POST" class="feedback">
+        <h2>Envie sua percepção sobre os arquivos</h2>
+        <textarea name="feedback" placeholder="Escreva aqui o que achou..." rows="6" required></textarea>
+        <button type="submit">Enviar Feedback</button>
+    </form>
+
+
 
 
     <!-- Seção para o ícone do WhatsApp -->
 <a id="whatsapp-icon" href="https://api.whatsapp.com/send?phone=5551999561111&text=Olá!"
 target="_blank" rel="noopener noreferrer" title="Feedback aqui!">
 </a>
+
+<!-- Footer com ícones de redes sociais -->
+<footer id="pf__footer" class="pf__footer">
+    <div class="pf__footer__content">
+        <p>2025 Ⓒ Victorino. Todos os direitos reservados. </p>
+    </div>         
+</footer>
 
     <!-- Script do JavaScript -->
     <script src="script.js"></script>

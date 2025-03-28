@@ -10,6 +10,11 @@ body {
 #corpo {
     padding-left: 90px;
 }
+@media (max-width: 1024px) {
+    #corpo {
+        padding-left: 40px;
+    }
+}
 
 /* Título Principal */
 h1 {
@@ -48,7 +53,7 @@ nav ul li a {
 
 /* Cor dos links ao passar o mouse */
 nav ul li a:hover {
-    color: #1abc9c;  /* Verde claro ao passar o mouse */
+    color: #e3c279;  /* Verde claro ao passar o mouse */
 }
 
 /* Estilo das Tracks */
@@ -194,3 +199,65 @@ input[type="range"] {
     20%, 60%   { transform: translateX(-5px); }
     40%, 80%   { transform: translateX(5px); }
   }
+
+
+  .pf__footer__content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    justify-content: center;
+    text-align: center;
+  }
+  .pf__footer p {
+    font-family: "Lora", "Times New Roman";
+    font-size: 15px;
+  }
+
+
+  .feedback {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background:  #4f7ca9a1;
+    border-radius: 10px;
+}
+
+.feedback textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.feedback button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.feedback h2 {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .feedback {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .feedback h2 {
+        font-size: 20px;
+    }
+
+    .feedback textarea {
+        font-size: 15px;
+    }
+
+    .feedback button {
+        width: 100%;
+        font-size: 15px;
+    }
+}
