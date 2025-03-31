@@ -104,7 +104,19 @@ function saveFeedback() {
     const key = getFeedbackKey();
     const feedback = document.getElementById("userFeedback").value;
     localStorage.setItem(key, feedback);
-    alert("Feedback salvo para este arquivo!");
+    showToast("✅ Feedback salvo para este arquivo.");
+    setTimeout(() => {
+        showToast("📲 Caso queira, você pode copiar e enviar por WhatsApp.");
+    }, 2900);
+}
+
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.className = "toast show";
+    setTimeout(() => {
+        toast.className = "toast";
+    }, 2700); // duração: 4s
 }
 
 // Ao carregar a página, preencher o campo se já tiver feedback salvo

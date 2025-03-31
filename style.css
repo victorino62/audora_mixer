@@ -23,7 +23,7 @@ h1 {
 }
 /* Estilo do menu de navegação */
 nav {
-    background-color: #34495e;  /* Cor do fundo do menu */
+    background-color: #a94f4fa1;  /* Cor do fundo do menu */
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -220,9 +220,10 @@ input[type="range"] {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background:  #4f7ca9a1;
+    background:  #a94f4fa1;
     border-radius: 10px;
 }
+
 
 .feedback textarea {
     width: 100%;
@@ -260,4 +261,28 @@ input[type="range"] {
         width: 100%;
         font-size: 15px;
     }
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 60px;
 }
